@@ -2,7 +2,7 @@ import pandas as pd
 import datetime
 from lxml import html
 import requests
-# import pygsheets
+import pygsheets
 def obs_from_portal(NE, url):
     xpath = '/html/body/main/div[2]/section[1]/div[3]/div/span/text()'
     url = url + NE
@@ -125,7 +125,7 @@ dados = dados.set_index("UG")
 dados.to_csv('saldo_em_RP_16{}.csv'.format(gestão))
 
 # gc = pygsheets.authorize(service_file='virtual-cubist-249800-c29651c665cb.json')
-# sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/10cSNEIfM9fcv9u_ZGXwOy9ffWrrcgnISIYlp_3wPZxA/edit#gid=0')
+# sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/10cSNEIfM9fcv9u_ZGXwOy9ffWrrcgnISIYlp_3wPZxA/edit#gid=434005774')
 # if gestão == 0:
 #     wks = sh[0]
 #     wks.clear(start='A2')
